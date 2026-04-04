@@ -1,0 +1,40 @@
+import React from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import AppLayout from './components/layout/AppLayout';
+
+// Pages
+import DashboardPage from './pages/DashboardPage';
+import SchedulePage from './pages/SchedulePage';
+import HotelPage from './pages/HotelPage';
+import GigsPage from './pages/GigsPage';
+import MarketPage from './pages/MarketPage';
+import ClientsPage from './pages/ClientsPage';
+import SosPage from './pages/SosPage';
+import FinancePage from './pages/FinancePage';
+import B2BRegistrationPage from './pages/B2BRegistrationPage';
+
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/partner/dashboard" replace />} />
+        
+        <Route path="/partner" element={<AppLayout />}>
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="schedule" element={<SchedulePage />} />
+          <Route path="hotel" element={<HotelPage />} />
+          <Route path="gigs" element={<GigsPage />} />
+          <Route path="market" element={<MarketPage />} />
+          <Route path="clients" element={<ClientsPage />} />
+          <Route path="sos" element={<SosPage />} />
+          <Route path="finance" element={<FinancePage />} />
+          <Route path="registration" element={<B2BRegistrationPage />} />
+        </Route>
+
+        <Route path="*" element={<Navigate to="/partner/dashboard" replace />} />
+      </Routes>
+    </HashRouter>
+  );
+}
+
+export default App;
