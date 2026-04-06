@@ -4,7 +4,7 @@ import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Plus, Users, Clock } from 'lucide-react';
 import { Modal } from '../components/ui/Modal';
-import { CrossSellModal } from '../components/cross-sell/CrossSellModal';
+import { BillingModal } from '../components/schedule/BillingModal';
 
 const HOURS = Array.from({ length: 13 }, (_, i) => i + 9); // 9 to 21
 
@@ -169,10 +169,10 @@ const SchedulePage = () => {
         </div>
       </Modal>
 
-      <CrossSellModal 
-        isOpen={!!endingAppointment} 
-        onClose={() => setEndingAppointment(null)} 
-        appointmentInfo={endingAppointment} 
+      <BillingModal
+          isOpen={!!endingAppointment}
+          onClose={() => setEndingAppointment(null)}
+          appointmentInfo={endingAppointment}
       />
 
     </div>
