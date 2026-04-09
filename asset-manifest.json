@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ozon-petcare-b2b/static/css/main.06653f99.css",
-    "main.js": "/ozon-petcare-b2b/static/js/main.7dc1ff82.js",
+    "main.css": "/ozon-petcare-b2b/static/css/main.30b9dcac.css",
+    "main.js": "/ozon-petcare-b2b/static/js/main.208906e5.js",
     "index.html": "/ozon-petcare-b2b/index.html",
-    "main.06653f99.css.map": "/ozon-petcare-b2b/static/css/main.06653f99.css.map",
-    "main.7dc1ff82.js.map": "/ozon-petcare-b2b/static/js/main.7dc1ff82.js.map"
+    "main.30b9dcac.css.map": "/ozon-petcare-b2b/static/css/main.30b9dcac.css.map",
+    "main.208906e5.js.map": "/ozon-petcare-b2b/static/js/main.208906e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.06653f99.css",
-    "static/js/main.7dc1ff82.js"
+    "static/css/main.30b9dcac.css",
+    "static/js/main.208906e5.js"
   ]
 }
