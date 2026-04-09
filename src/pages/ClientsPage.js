@@ -24,7 +24,7 @@ const ClientsPage = () => {
       )}>
         <div className="flex items-center justify-between mb-4 flex-shrink-0">
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-gray-900">База пациентов (Pet ID)</h2>
+            <h2 className="text-xl font-bold tracking-tight text-gray-900">База клиентов</h2>
           </div>
           <div className="flex items-center gap-3">
              <div className="relative">
@@ -45,9 +45,9 @@ const ClientsPage = () => {
             <thead className="bg-gray-50 border-b border-gray-200 text-sm font-semibold text-gray-600">
               <tr>
                 <th className="px-6 py-4">Клиент / Телефон</th>
-                <th className="px-6 py-4">Питомец (Pet ID)</th>
+                <th className="px-6 py-4">Питомец</th>
                 <th className="px-6 py-4">Последний визит</th>
-                <th className="px-6 py-4 text-right">LTV</th>
+                <th className="px-6 py-4 text-right">Выручка</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 overflow-y-auto">

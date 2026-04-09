@@ -1,12 +1,9 @@
 import React from 'react';
 import { Modal } from '../ui/Modal';
-import { Badge } from '../ui/Badge';
 import { Wallet, CheckCircle2 } from 'lucide-react';
-import useProfileStore from '../../store/useProfileStore';
 
 export const BillingModal = ({ isOpen, onClose, appointmentInfo }) => {
-    const { subscription } = useProfileStore();
-    const feePercent = subscription.status === 'pro' ? 5 : 15;
+    const feePercent = 15; // Фиксированная комиссия Ozon, без всяких PRO
     const basePrice = appointmentInfo?.durationMinutes === 90 ? 2500 : 1200;
     const ozonFee = (basePrice * feePercent) / 100;
     const finalPayout = basePrice - ozonFee;
@@ -33,7 +30,6 @@ export const BillingModal = ({ isOpen, onClose, appointmentInfo }) => {
                     <div className="flex items-center gap-2 mb-4">
                         <Wallet size={18} className="text-brand-600" />
                         <h4 className="font-bold text-gray-900">Детализация Ozon Pay</h4>
-                        {subscription.status === 'pro' && <Badge variant="ozon" icon="premium" className="ml-auto text-[10px] py-0 h-5">PRO Тариф</Badge>}
                     </div>
 
                     <div className="flex flex-col gap-2">
@@ -56,8 +52,7 @@ export const BillingModal = ({ isOpen, onClose, appointmentInfo }) => {
                     onClick={onClose}
                     className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-bold hover:bg-black transition-all hover:shadow-lg flex justify-center items-center gap-2"
                 >
-                    <CheckCircle2 size={20} />
-                    Выставить счет и завершить
+                    <CheckCircle2 size={20} /> Выставить счет и завершить
                 </button>
             </div>
         </Modal>

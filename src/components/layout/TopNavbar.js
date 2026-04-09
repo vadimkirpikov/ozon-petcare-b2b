@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 const routeNames = {
   '/partner/dashboard': 'Главный дашборд',
-  '/partner/schedule': 'Расписание (ЕМИАС)',
+  '/partner/schedule': 'Расписание',
   '/partner/hotel': 'Зоогостиница',
   '/partner/gigs': 'Биржа фриланса',
   '/partner/market': 'Маркет заводчиков',
